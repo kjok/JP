@@ -1,0 +1,20 @@
+BODY{color : "maroon";line-height: 150%;background-image:url('bg27.gif');
+font-style: nomal; 
+font-family: "Times New Roman","Times","serif" }
+
+H1{text-align : center;background-color : "#996666";color : white;
+line-height: 150%;}
+
+H2{font-family : ms pgothic;text-decoration : none;font-weight : bold;
+border-width : 0px 16px 4px 0px;border-color :maroon maroon maroon maroon;
+border-style : solid solid solid solid;line-height: 100%;text-align : left;}
+
+H3{font-family : ms pgothic;text-align : left;}
+
+H4{font-weight : bold;color : #666666;}
+
+P{margin: 6px;line-height: 130%;}
+
+BLOCKQUOTE{margin-left:20px;color : maroon;}
+li{line-height: 150%;}
+table{margin-left:20px;color : "#715f3e";}
