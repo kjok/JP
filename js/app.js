@@ -58,7 +58,7 @@
 							{name: 'p36-42', url: 'pages/book3steps/p36-42.html'},
 							{name: 'p43-49', url: 'pages/book3steps/p43-49.html'},
 							{name: 'p50-55', url: 'pages/book3steps/p50-55.html'},
-							{name: 'p56-61', url: 'pages/book3steps/p13-20.html'},
+							{name: 'p56-61', url: 'pages/book3steps/p56-61.html'},
 							{name: 'p62-68', url: 'pages/book3steps/p62-68.html'},
 							{name: 'p69-75', url: 'pages/book3steps/p69-75.html'},
 							{name: 'p76-80', url: 'pages/book3steps/p76-80.html'},
