@@ -21,3 +21,6 @@ body {
 [ng-click],[data-ng-click] {
 	cursor: pointer;
 }
+.lead {
+  font-size: 16px;
+}
