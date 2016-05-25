@@ -152,7 +152,18 @@ dd {
 small {
     font-size: smaller;
 }
+table {
+    margin:20px auto;
+}
+ruby {
+  position: relative;
+}
 
+ruby rt {
+  position: relative;
+  top: 0.6ex;
+  font-size: .4rem;
+}
 
 /* ----------------------------
 base sections layout
