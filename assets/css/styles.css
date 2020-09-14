@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* -----------------------------
+OZ RESET CSS
+Author: ONZE
+Author URI: http://on-ze.com
+Version: 1.0
+License: GNU General Public License
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- Modified -
+----------------------------- */
+html { width: 100%; height: 100%; font-size: 62.5%; /*10px*/ scroll-behavior: smooth; }
+
+body { width: 100%; color: #333; font-size: 1.5em; font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', 'YuGothic', 'Yu Gothic', '游ゴシック', 'Meiryo', 'メイリオ', Arial, Roboto, "Droid Sans", Helvetica, sans-serif; line-height: 1; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -o-text-size-adjust: 100%; text-size-adjust: 100%; text-align: left; margin: 0; display: flex; flex-flow: column nowrap; min-height: 100vh; }
+
+* { border: 0; margin: 0; outline: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; background: transparent; font-size: 1.5rem; font: inherit; font-family: inherit; font-style: inherit; font-weight: inherit; text-decoration: none; vertical-align: baseline; }
+
+article, aside, dialog, figure, footer, header, main, menu, nav, section { display: block; }
+
+audio, canvas, video { display: inline-block; }
+
+br, hr { display: block; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* --- reset end --
+common settings
+----------------- */
+:root { --hue: 30; --accent-hue-color: red; --much-more-lighten-color: hsl(var(--hue), 100%, 95%); --more-lighten-color: hsl(var(--hue), 100%, 85%); --lighten-color: hsl(var(--hue), 100%, 80%); --base-color: hsl(var(--hue), 100%, 50%); --darken-color: hsl(var(--hue), 100%, 40%); --more-darken-color: hsl(var(--hue), 100%, 30%); --much-more-darken-color:hsl(var(--hue), 100%, 20%); --more-lighten-color-alpha: hsla(var(--hue), 100%, 85%,0.7); }
+
+h1 { font-size: 2.6rem; margin: 2.6rem 0; }
+
+h2 { font-size: 2.4rem; margin: 2.4rem 0; }
+
+h3 { font-size: 2rem; margin: 2rem 0; }
+
+h4 { font-size: 1.8rem; margin: 1.8rem 0; font-weight: 900; }
+
+h5 { font-size: 1.6rem; margin: .8rem 0; font-weight: 900; }
+
+p, ol, ul { margin-bottom: 1rem; line-height: 1.4; }
+
+blockquote, .blockquote { margin-bottom: 1rem; padding: 12px; background-color: #ddf; border-radius: 5px; }
+
+blockquote > ol { margin-bottom: 0; }
+
+dt { margin: 1rem 0; font-weight: 700; }
+
+dd { margin: 1rem 0; }
+
+small { font-size: smaller; }
+
+table { margin: 20px auto; }
+
+ruby { position: relative; }
+
+ruby rt { position: relative; font-family: sans-serif; font-weight: bold; color: chocolate; font-size: .8rem; }
+
+/* ----------------------------
+base sections layout
+-----------------------------*/
+body { color: var(--much-more-darken-color); }
+
+header#siteheader { height: 30px; box-shadow: 0px 1px 1px 1px var(--lighten-color); background-color: var(--more-lighten-color); z-index: 0; }
+
+#sitenav { background: transparent; position: absolute; top: 0; left: 0; z-index: 99; width: calc(100% - 30rem); height: 52rem; }
+
+#sitenav iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+main { flex: 1; }
+
+footer#sitefooter { height: 60px; background-color: var(--lighten-color); padding: 10px; display: flex; align-items: center; }
+
+/* ---------------------------- main sections -----------------------------*/
+header#siteheader h1 { height: 30px; width: 140px; margin: 0 0 0 40px; background-image: url("../images/maum.gif"); background-size: auto 30px; background-repeat: no-repeat; font-size: 0; }
+
+div#sitenav-content { background-color: transparent; }
+
+div#sitenav-content a { display: block; padding: 0 .5rem; font-size: 1.4rem; line-height: 30px; font-weight: 700; color: var(--much-more-darken-color); }
+
+div#sitenav-content ul li ul li:hover, div#sitenav-content a:hover { background: var(--darken-color); }
+
+main { padding: 0 1rem; flex-direction: column; }
+
+main header h2 { font-size: 1.4rem; margin: 2.4rem; text-align: left; }
+
+main header h3 { text-align: center; }
+
+.meg_base > section { display: flex; flex-direction: column; }
+
+.meg_base img { width: 100%; max-width: 40rem; align-self: center; }
+
+.home_index { text-align: center; }
+
+div#sitenav-content { display: flex; flex-wrap: wrap; justify-content: space-between; }
+
+div#sitenav-content label.toggle { color: var(--much-more-darken-color); font-size: 1.2rem; line-height: 1; border: none; position: absolute; top: .6rem; left: .6rem; font-size: 2rem; font-weight: 800; }
+
+div#sitenav-content > ul { min-width: 60rem; display: flex; flex: 1; flex-wrap: wrap; --multiplier: calc(84rem - 100%); --margin: 0; margin: calc(var(--margin) * -1); /* excess margin removed */ }
+
+div#sitenav-content > ul::before { content: "\3000"; padding: .6rem 8rem; pointer-events: none; }
+
+div#sitenav-content > ul > li { min-width: 14rem; max-width: 100%; height: 30px; flex-grow: 0; flex-basis: calc(var(--multiplier) * 999); margin: var(--margin); background-color: var(--more-lighten-color-alpha); }
+
+div#sitenav-content label.toggle + a, div#sitenav-content input[id^=drop] { display: none; }
+
+div#sitenav-content ul li { position: relative; }
+
+div#sitenav-content ul li ul { position: absolute; top: 3rem; left: 3rem; width: 14rem; display: none; background-color: var(--more-lighten-color); border: 0px 0px 0px 1px rgba(0, 0, 0, 0.6); -moz-box-shadow: 3px 3px 3px var(--lighten-color); -webkit-box-shadow: 3px 3px 3px var(--lighten-color); box-shadow: 3px 3px 3px var(--lighten-color); }
+
+div#sitenav-content ul li:hover ul { display: block; z-index: 99; }
+
+div#sitenav-content a:hover { background-color: var(--lighten-color); }
+
+div#sitenav-content > input[id^=drop]:checked + ul { display: flex; }
+
+div#sitenav-content > input[id^=drop]:checked + ul * { display: none; }
+
+.current { background-color: var(--lighten-color); }
+
+/* navigation bar end */
+/* main content */
+#footerframe { width: 100%; height: 100%; background-color: transparent; }
+
+.lead { font-size: 1.6rem; }
+
+#back-to-top { position: fixed; right: 10px; bottom: 20px; z-index: 99; }
+
+#back-to-top a { display: block; padding: 4px; text-align: center; font-weight: bolder; color: var(--more-darken-color); background-color: var(--more-lighten-color); -moz-box-shadow: 5px 5px 5px var(--lighten-color); -webkit-box-shadow: 5px 5px 5px var(--lighten-color); box-shadow: 5px 5px 5px var(--lighten-color); }
+
+#back-to-top a:hover { background-color: var(--lighten-color); -moz-box-shadow: 3px 3px 3px var(--base-color); -webkit-box-shadow: 3px 3px 3px var(--base-color); box-shadow: 3px 3px 3px var(--base-color); }
+
+#back-to-top a:active { margin: 2px auto auto 2px; color: var(--accent-hue-color); -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+
+.utube_iframe_wrap { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+
+.utube_iframe_wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* ===================================================
+書籍、講義 スタイル ページ
+====================================================*/
+/* --------------------------------
+Meg book
+-------------------------------- */
+#booknav { position: fixed; right: 0; top: 80px; width: 250px; padding: 1rem; background-color: var(--more-lighten-color); box-shadow: 0 0 1em var(--more-lighten-color); -webkit-box-shadow: 0 0 1em var(--more-darken-color); -moz-box-shadow: 0 0 1em var(--more-darken-color); border-bottom-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomleft: 5px; max-height: 80%; overflow: auto; z-index: 99; }
+
+#booktoc { /* height: 31rem;*/ padding: 1rem 0 0; }
+
+#booktoc h2 { font-size: 1.2rem; margin: 0; padding: 1rem; }
+
+#bookTocFrameContent { background-color: transparent; }
+
+#booktoc li, #bookTocFrameContent li { font-size: 1rem; margin: .2rem; }
+
+#booktoc a, #bookTocFrameContent a { font-size: 1rem; display: block; width: 100%; color: var(--darken-color); }
+
+#booktoc a:hover, #bookTocFrameContent a:hover { background-color: var(--lighten-color); }
+
+main[data-main="allkuu"] #booktoc ul:nth-child(2), #bookTocFrameContent.academy22Menu ul { display: flex; flex-flow: column wrap; align-items: stretch; height: 29rem; margin-left: -.2rem; }
+
+main[data-main="allkuu"] #booktoc ul:nth-child(2) li { width: 8rem; text-align: right; }
+
+#bookTocFrameContent.academy22Menu li { display: flex; flex-flow: row nowrap; width: 10.4rem; }
+
+#bookTocFrameContent.academy22Menu li a span:nth-child(1) { display: inline-block; width: 1rem; white-space: nowrap; text-align: right; }
+
+#bookTocFrameContent.academy22Menu li a span:nth-child(2) { display: inline-block; white-space: nowrap; padding-left: .3rem; flex-grow: 1; }
+
+#booknav { transition: .3s; }
+
+#booknav input[type="checkbox"] { position: absolute; top: -9999px; left: -9999px; }
+
+#booknav label { cursor: pointer; display: block; font-size: 1.2rem; padding: 0; text-align: center; margin: 0; }
+
+#booknav input[type="checkbox"] ~ div#booktoc { display: none; }
+
+#booknav input[type="checkbox"]:checked ~ div#booktoc { display: block; }
+
+main, main[data-main="allsteps"], main[data-main="allkuu"], main[data-main="academy22"] { -webkit-flex: 1; flex: 2; margin-top: 0; padding: 1.5rem; /* background-image: url(../images/bg27.gif);*/ background-color: var(--much-more-lighten-color); font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
+
+main[data-main="allsteps"] figcaption, main[data-main="allkuu"] figcaption, main[data-main="academy22"] figcaption { margin: 1rem 0; padding: 12px; line-height: 1.4; border: 1px groove #fff; border-radius: 5px; }
+
+main[data-main="allsteps"] > section, main[data-main="allkuu"] > section, main[data-main="academy22"] > section { margin: 3rem 0; }
+
+main[data-main="allsteps"] h1, main[data-main="allkuu"] h1, main[data-main="academy22"] h1 { font-size: 2rem; margin: 2rem 0; }
+
+main[data-main="allsteps"] h2, main[data-main="allkuu"] h2, main[data-main="academy22"] h2 { font-size: 1.8rem; margin: 1.8rem 0; font-weight: 900; }
+
+main[data-main="allsteps"] h3, main[data-main="allkuu"] h3, main[data-main="academy22"] h3 { font-size: 1.6rem; margin: 1.6rem 0; font-weight: 900; }
+
+main[data-main="allsteps"] h4, main[data-main="allkuu"] h4, main[data-main="academy22"] h4 { font-size: 1.5rem; margin: 1.5rem 0; font-weight: 900; }
+
+main[data-main="allsteps"] article footer, main[data-main="allkuu"] article footer, main[data-main="academy22"] article footer { width: 90%; font-size: 1.6rem; line-height: 24px; padding: 20px 10px 10px; border: 4px groove; background-color: var(--much-more-lighten-color); }
+
+#p-colophon { text-align: center; border: 4px double; }
+
+#yakuchuu { padding: 1rem; border-radius: 6px; }
+
+#booktoc a.copyrightcope { color: var(--more-lighten-color); }
+
+article.copyrightcope { margin-top: 2rem; }
+
+article.copyrightcope::before { color: var(--accent-hue-color); content: "[訳文の一部を非表示にしています。]"; }
+
+article.copyrightcope * { color: var(--much-more-lighten-color); -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; cursor: default; }
+
+img.illust { width: 100%; max-width: 400px; }
+
+/* --------------------------------
+菩薩道チャート
+-------------------------------- */
+#bosatsudo { display: table; font-size: large; margin: 1em; }
+
+#bosatsudo > div { display: table-cell; text-align: center; vertical-align: middle; }
+
+#bosatsudo > div > p { white-space: nowrap; }
+
+/* --------------------------------
+academy
+-------------------------------- */
+main[data-main="academy22"] .bookcontainer { font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
+
+main[data-main="academy22"] #booktoc iframe { width: 22rem; height: 30rem; }
+
+main[data-main="academy22"] > header > h2 { padding-left: 140px; background-image: url("/ko/academy22/Images/dongsasub.png"); background-position: left; /* Center the image */ background-repeat: no-repeat; /* Do not repeat the image */ background-size: contain; /* 画像のサイズを指定    */ height: fit-content; }
+
+main[data-main="academy22"] > header > .author { width: 100%; margin: 40px auto; font-size: large; text-align: center; }
+
+main[data-main="academy22"] > section > h2 > span { display: inline-block; margin-right: 1em; }
+
+.utube_iframe_wrap_outer { max-width: 500px; padding: 40px 0; }
+
+/*# sourceMappingURL=styles.css.map */
