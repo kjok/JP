@@ -1,20 +1,15 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Noto+Serif+KR&display=swap");
 /* -----------------------------
-OZ RESET CSS
-Author: ONZE
-Author URI: http://on-ze.com
-Version: 1.0
-License: GNU General Public License
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-- Modified -
+RESET
 ----------------------------- */
 html { width: 100%; height: 100%; font-size: 62.5%; /*10px*/ scroll-behavior: smooth; }
 
-body { width: 100%; color: #333; font-size: 1.5em; font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', 'YuGothic', 'Yu Gothic', '游ゴシック', 'Meiryo', 'メイリオ', Arial, Roboto, "Droid Sans", Helvetica, sans-serif; line-height: 1; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -o-text-size-adjust: 100%; text-size-adjust: 100%; text-align: left; margin: 0; display: flex; flex-flow: column nowrap; min-height: 100vh; }
+body { width: 100%; color: #333; font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro', 'YuGothic', 'Yu Gothic', '游ゴシック', 'Meiryo', 'メイリオ', Arial, Roboto, "Droid Sans", Helvetica, sans-serif; line-height: 1.4; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -o-text-size-adjust: 100%; text-size-adjust: 100%; text-align: left; margin: 0; display: flex; flex-flow: column nowrap; min-height: 100vh; font-size: 1.5rem; }
 
 * { border: 0; margin: 0; outline: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; background: transparent; font-size: 1.5rem; font: inherit; font-family: inherit; font-style: inherit; font-weight: inherit; text-decoration: none; vertical-align: baseline; }
 
-article, aside, dialog, figure, footer, header, main, menu, nav, section { display: block; }
+article, aside, dialog, figure, footer, header, main, menu, nav, section { display: flex; flex-direction: column; }
 
 audio, canvas, video { display: inline-block; }
 
@@ -27,21 +22,21 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* --- reset end --
 common settings
 ----------------- */
-:root { --hue: 30; --accent-hue-color: red; --much-more-lighten-color: hsl(var(--hue), 100%, 95%); --more-lighten-color: hsl(var(--hue), 100%, 85%); --lighten-color: hsl(var(--hue), 100%, 80%); --base-color: hsl(var(--hue), 100%, 50%); --darken-color: hsl(var(--hue), 100%, 40%); --more-darken-color: hsl(var(--hue), 100%, 30%); --much-more-darken-color:hsl(var(--hue), 100%, 20%); --more-lighten-color-alpha: hsla(var(--hue), 100%, 85%,0.7); }
+:root { --hue: 250; --much-more-lighten-color: hsl(var(--hue), 100%, 95%); --more-lighten-color: hsl(var(--hue), 100%, 85%); --lighten-color: hsl(var(--hue), 100%, 80%); --base-color: hsl(var(--hue), 100%, 50%); --darken-color: hsl(var(--hue), 100%, 40%); --more-darken-color: hsl(var(--hue), 100%, 30%); --much-more-darken-color: hsl(var(--hue), 100%, 20%); --more-lighten-color-alphaL: hsla(0, 0%, 99%, 20%); --more-lighten-color-alphaM: hsla(0, 0%, 95%, 70%); --more-lighten-color-alphaH: hsla(0, 0%, 95%, 90%); --hue3: 256; --note-hue-color: hsl(var(--hue3), 100%, 50%); --accent-hue-color: hsl(55, 100%, 50%); }
 
-h1 { font-size: 2.6rem; margin: 2.6rem 0; }
+h1 { font-size: 2.6rem; margin: 2.6rem; text-align: center; }
 
-h2 { font-size: 2.4rem; margin: 2.4rem 0; }
+h2 { font-size: 2rem; margin: 2rem; }
 
-h3 { font-size: 2rem; margin: 2rem 0; }
+h3 { font-size: 1.8rem; margin: 1.8rem; }
 
-h4 { font-size: 1.8rem; margin: 1.8rem 0; font-weight: 900; }
+h4 { font-size: 1.6rem; margin: 1.6rem; font-weight: 900; }
 
-h5 { font-size: 1.6rem; margin: .8rem 0; font-weight: 900; }
+h5 { font-size: 1.6rem; margin: 1.6rem; font-weight: 900; }
 
 p, ol, ul { margin-bottom: 1rem; line-height: 1.4; }
 
-blockquote, .blockquote { margin-bottom: 1rem; padding: 12px; background-color: #ddf; border-radius: 5px; }
+blockquote { margin-bottom: 1rem; padding: 12px; background: var(--more-lighten-color); border-radius: 5px; }
 
 blockquote > ol { margin-bottom: 0; }
 
@@ -53,79 +48,72 @@ small { font-size: smaller; }
 
 table { margin: 20px auto; }
 
-ruby { position: relative; }
-
-ruby rt { position: relative; font-family: sans-serif; font-weight: bold; color: chocolate; font-size: .8rem; }
+ruby rt { font-size: .8em; color: #e95464; }
 
 /* ----------------------------
 base sections layout
 -----------------------------*/
-body { color: var(--much-more-darken-color); }
+body { color: var(--much-more-darken-color); position: relative; background-image: linear-gradient(to right, white, grey), url(../images/paper.png); background-size: cover; background-blend-mode: lighten; }
 
-header#siteheader { height: 30px; box-shadow: 0px 1px 1px 1px var(--lighten-color); background-color: var(--more-lighten-color); z-index: 0; }
+header#siteheader { height: 5rem; width: 100%; background-color: transparent; }
 
-#sitenav { background: transparent; position: absolute; top: 0; left: 0; z-index: 99; width: calc(100% - 30rem); height: 52rem; }
+header#siteheader img { position: absolute; top: 1.7rem; left: 5rem; width: 70px; z-index: 999; }
 
-#sitenav iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+#sitenav { position: absolute; top: 0; left: 0; margin: 1rem; z-index: 99; min-width: 15rem; max-width: calc(100% - 2rem); min-height: 3rem; max-height: 52rem; flex-grow: 0; --multiplier: calc(61rem - 100%); width: calc(15rem + calc(var(--multiplier) * -999)); background-color: var(--more-lighten-color-alphaH); border: 1px groove #fff; border-radius: 5px; }
 
 main { flex: 1; }
 
-footer#sitefooter { height: 60px; background-color: var(--lighten-color); padding: 10px; display: flex; align-items: center; }
+footer#sitefooter { height: 60px; border: 1px groove #fff; border-radius: 5px; padding: 10px; margin: .4rem; display: flex; align-self: stretch; }
 
-/* ---------------------------- main sections -----------------------------*/
-header#siteheader h1 { height: 30px; width: 140px; margin: 0 0 0 40px; background-image: url("../images/maum.gif"); background-size: auto 30px; background-repeat: no-repeat; font-size: 0; }
+#breadcrumbs { margin-left: 4rem; }
 
-div#sitenav-content { background-color: transparent; }
+aside#back-to-top { position: fixed; right: 10px; bottom: 20px; z-index: 99; }
 
-div#sitenav-content a { display: block; padding: 0 .5rem; font-size: 1.4rem; line-height: 30px; font-weight: 700; color: var(--much-more-darken-color); }
+/* ---------------------------- site navigation section -----------------------------*/
+div#sitenav-content { display: flex; flex-wrap: wrap; justify-content: space-between; position: relative; }
 
-div#sitenav-content ul li ul li:hover, div#sitenav-content a:hover { background: var(--darken-color); }
+div#sitenav-content a { padding: 0 .2rem; font-size: 1.4rem; line-height: 30px; font-weight: 500; color: var(--much-more-darken-color); transition: text-shadow .5s linear 0s, color .5s linear 0.2s; }
 
-main { padding: 0 1rem; flex-direction: column; }
+div#sitenav-content a:hover, .current { color: #fffff0; font-weight: bold; -moz-text-shadow: 0 0.05em 0.08em rgba(0, 0, 0, 0.7); -webkit-text-shadow: 0 0.05em 0.08em rgba(0, 0, 0, 0.7); text-shadow: 0 0.05em 0.08em rgba(0, 0, 0, 0.7); }
 
-main header h2 { font-size: 1.4rem; margin: 2.4rem; text-align: left; }
+/*------------------------
+Just a quick hamburger
+------------------------*/
+div#sitenav-content label.toggle { margin-inline-end: auto; padding: 7px 0 6px 4px; height: 31px; width: 31px; display: flex; flex-flow: column; justify-content: space-around; }
 
-main header h3 { text-align: center; }
+div#sitenav-content label.toggle span { width: 1.6rem; height: .23rem; position: relative; background: var(--much-more-darken-color); border-radius: 3px; }
 
-.meg_base > section { display: flex; flex-direction: column; }
+/* -----------------------------------
+navigation boxes
+----------------------------------- */
+div#sitenav-content * { word-break: keep-all; }
 
-.meg_base img { width: 100%; max-width: 40rem; align-self: center; }
+div#sitenav-content > ul > li { min-width: 10rem; max-width: 100%; height: 30px; flex-grow: 0; flex-basis: calc(var(--multiplier) * 999); position: relative; }
 
-.home_index { text-align: center; }
+div#sitenav-content > ul > li:first-child a { visibility: hidden; }
 
-div#sitenav-content { display: flex; flex-wrap: wrap; justify-content: space-between; }
+div#sitenav-content > ul > li:first-child a:hover { visibility: visible; transition: visibility 1s ease; }
 
-div#sitenav-content label.toggle { color: var(--much-more-darken-color); font-size: 1.2rem; line-height: 1; border: none; position: absolute; top: .6rem; left: .6rem; font-size: 2rem; font-weight: 800; }
-
-div#sitenav-content > ul { min-width: 60rem; display: flex; flex: 1; flex-wrap: wrap; --multiplier: calc(84rem - 100%); --margin: 0; margin: calc(var(--margin) * -1); /* excess margin removed */ }
-
-div#sitenav-content > ul::before { content: "\3000"; padding: .6rem 8rem; pointer-events: none; }
-
-div#sitenav-content > ul > li { min-width: 14rem; max-width: 100%; height: 30px; flex-grow: 0; flex-basis: calc(var(--multiplier) * 999); margin: var(--margin); background-color: var(--more-lighten-color-alpha); }
-
-div#sitenav-content label.toggle + a, div#sitenav-content input[id^=drop] { display: none; }
-
-div#sitenav-content ul li { position: relative; }
-
-div#sitenav-content ul li ul { position: absolute; top: 3rem; left: 3rem; width: 14rem; display: none; background-color: var(--more-lighten-color); border: 0px 0px 0px 1px rgba(0, 0, 0, 0.6); -moz-box-shadow: 3px 3px 3px var(--lighten-color); -webkit-box-shadow: 3px 3px 3px var(--lighten-color); box-shadow: 3px 3px 3px var(--lighten-color); }
+div#sitenav-content ul li ul { position: absolute; top: 3rem; left: 2.5rem; width: 13rem; display: none; background-color: var(--more-lighten-color-alphaM); border: 1px groove #fff; border-radius: 5px; }
 
 div#sitenav-content ul li:hover ul { display: block; z-index: 99; }
 
-div#sitenav-content a:hover { background-color: var(--lighten-color); }
+div#sitenav-content input[id^=drop] { display: none; }
 
-div#sitenav-content > input[id^=drop]:checked + ul { display: flex; }
+/* -- navigation container -- */
+div#sitenav-content > input[id^=drop] + ul { min-width: 60rem; display: flex; flex: 1; flex-wrap: wrap; margin-bottom: 0; }
 
-div#sitenav-content > input[id^=drop]:checked + ul * { display: none; }
-
-.current { background-color: var(--lighten-color); }
+div#sitenav-content > input[id^=drop]:checked + ul { display: none; transition: all 3s linear; }
 
 /* navigation bar end */
 /* main content */
+main { padding: 0 1rem; flex-direction: column; background: transparent; flex: 2; margin-top: 0; padding: 1.5rem; font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
+
+main[data-main="home_index"] { text-align: center; }
+
 #footerframe { width: 100%; height: 100%; background-color: transparent; }
 
 .lead { font-size: 1.6rem; }
-
-#back-to-top { position: fixed; right: 10px; bottom: 20px; z-index: 99; }
 
 #back-to-top a { display: block; padding: 4px; text-align: center; font-weight: bolder; color: var(--more-darken-color); background-color: var(--more-lighten-color); -moz-box-shadow: 5px 5px 5px var(--lighten-color); -webkit-box-shadow: 5px 5px 5px var(--lighten-color); box-shadow: 5px 5px 5px var(--lighten-color); }
 
@@ -143,13 +131,12 @@ div#sitenav-content > input[id^=drop]:checked + ul * { display: none; }
 /* --------------------------------
 Meg book
 -------------------------------- */
-#booknav { position: fixed; right: 0; top: 80px; width: 250px; padding: 1rem; background-color: var(--more-lighten-color); box-shadow: 0 0 1em var(--more-lighten-color); -webkit-box-shadow: 0 0 1em var(--more-darken-color); -moz-box-shadow: 0 0 1em var(--more-darken-color); border-bottom-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomleft: 5px; max-height: 80%; overflow: auto; z-index: 99; }
+#booknav { position: fixed; right: 0; top: 80px; width: 250px; padding: 1rem; background-color: var(--more-lighten-color-alphaH); border: 1px groove #fff; border-radius: 5px; max-height: 80%; overflow: auto; z-index: 99; }
 
 #booktoc { /* height: 31rem;*/ padding: 1rem 0 0; }
 
-#booktoc h2 { font-size: 1.2rem; margin: 0; padding: 1rem; }
-
-#bookTocFrameContent { background-color: transparent; }
+/* #booktoc h2 { font-size: 1.2rem; margin: 0; padding: 1rem; }*/
+#bookTocFrameContent { background-color: var(--more-lighten-color-alphaH); }
 
 #booktoc li, #bookTocFrameContent li { font-size: 1rem; margin: .2rem; }
 
@@ -157,7 +144,7 @@ Meg book
 
 #booktoc a:hover, #bookTocFrameContent a:hover { background-color: var(--lighten-color); }
 
-main[data-main="allkuu"] #booktoc ul:nth-child(2), #bookTocFrameContent.academy22Menu ul { display: flex; flex-flow: column wrap; align-items: stretch; height: 29rem; margin-left: -.2rem; }
+main[data-main="allkuu"] #booktoc ul:nth-child(2), #bookTocFrameContent.academy22Menu ul { display: flex; flex-flow: column wrap; align-items: stretch; height: 26rem; width: 12rem; margin-left: -.2rem; margin-bottom: 0; }
 
 main[data-main="allkuu"] #booktoc ul:nth-child(2) li { width: 8rem; text-align: right; }
 
@@ -175,25 +162,17 @@ main[data-main="allkuu"] #booktoc ul:nth-child(2) li { width: 8rem; text-align: 
 
 #booknav input[type="checkbox"] ~ div#booktoc { display: none; }
 
-#booknav input[type="checkbox"]:checked ~ div#booktoc { display: block; }
+#booknav input[type="checkbox"]:checked ~ div#booktoc { display: block; background-color: var(--more-lighten-color-alphaH); }
 
-main, main[data-main="allsteps"], main[data-main="allkuu"], main[data-main="academy22"] { -webkit-flex: 1; flex: 2; margin-top: 0; padding: 1.5rem; /* background-image: url(../images/bg27.gif);*/ background-color: var(--much-more-lighten-color); font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
+main[data-main="allsteps"] figure *, main[data-main="allkuu"] figure * { width: 191px; height: auto; }
 
-main[data-main="allsteps"] figcaption, main[data-main="allkuu"] figcaption, main[data-main="academy22"] figcaption { margin: 1rem 0; padding: 12px; line-height: 1.4; border: 1px groove #fff; border-radius: 5px; }
+main[data-main="allsteps"] figcaption, main[data-main="allkuu"] figcaption { margin: 1rem 0; padding: 12px; line-height: 1.4; border: 1px groove #fff; border-radius: 5px; }
 
-main[data-main="allsteps"] > section, main[data-main="allkuu"] > section, main[data-main="academy22"] > section { margin: 3rem 0; }
+main[data-main="meg_base"] figure *, main[data-main="introduction_e"] figure *, main[data-main="dongsa_history"] figure * { width: 450px; align-self: center; }
 
-main[data-main="allsteps"] h1, main[data-main="allkuu"] h1, main[data-main="academy22"] h1 { font-size: 2rem; margin: 2rem 0; }
+main > footer { width: 90%; font-size: 1.6rem; line-height: 24px; padding: 20px 10px 10px; border: 4px groove; background-color: var(--much-more-lighten-color); }
 
-main[data-main="allsteps"] h2, main[data-main="allkuu"] h2, main[data-main="academy22"] h2 { font-size: 1.8rem; margin: 1.8rem 0; font-weight: 900; }
-
-main[data-main="allsteps"] h3, main[data-main="allkuu"] h3, main[data-main="academy22"] h3 { font-size: 1.6rem; margin: 1.6rem 0; font-weight: 900; }
-
-main[data-main="allsteps"] h4, main[data-main="allkuu"] h4, main[data-main="academy22"] h4 { font-size: 1.5rem; margin: 1.5rem 0; font-weight: 900; }
-
-main[data-main="allsteps"] article footer, main[data-main="allkuu"] article footer, main[data-main="academy22"] article footer { width: 90%; font-size: 1.6rem; line-height: 24px; padding: 20px 10px 10px; border: 4px groove; background-color: var(--much-more-lighten-color); }
-
-#p-colophon { text-align: center; border: 4px double; }
+#p-colophon { text-align: center; border: 4px double; width: 30rem; }
 
 #yakuchuu { padding: 1rem; border-radius: 6px; }
 
@@ -205,7 +184,7 @@ article.copyrightcope::before { color: var(--accent-hue-color); content: "[訳�
 
 article.copyrightcope * { color: var(--much-more-lighten-color); -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; cursor: default; }
 
-img.illust { width: 100%; max-width: 400px; }
+img.illust { width: 100%; max-width: 400px; padding: 3rem 0; }
 
 /* --------------------------------
 菩薩道チャート
@@ -219,11 +198,11 @@ img.illust { width: 100%; max-width: 400px; }
 /* --------------------------------
 academy
 -------------------------------- */
-main[data-main="academy22"] .bookcontainer { font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
+main[data-main="academy22"] p { font-family: 'Noto Serif KR', 'Noto Serif JP', serif; line-height: 2.4; }
 
 main[data-main="academy22"] #booktoc iframe { width: 22rem; height: 30rem; }
 
-main[data-main="academy22"] > header > h2 { padding-left: 140px; background-image: url("/ko/academy22/Images/dongsasub.png"); background-position: left; /* Center the image */ background-repeat: no-repeat; /* Do not repeat the image */ background-size: contain; /* 画像のサイズを指定    */ height: fit-content; }
+main[data-main="academy22"] > header > div.logo { padding-left: 17rem; background-image: url("/ko/academy22/Images/dongsasub.png"); background-position: left; /* Center the image */ background-repeat: no-repeat; /* Do not repeat the image */ background-size: contain; /* 画像のサイズを指定    */ height: fit-content; }
 
 main[data-main="academy22"] > header > .author { width: 100%; margin: 40px auto; font-size: large; text-align: center; }
 

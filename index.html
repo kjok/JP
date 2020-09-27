@@ -3,18 +3,20 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
     <title>Home</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
     <header id="siteheader">
-    <h1>Maum net</h1>
+   <a href="/index.html" title="ホーム"><img src="/assets/images/maum.gif" alt="home"></a>
 </header> 
     <nav id="sitenav">
     <div id="sitenav-content">
-        <label for="drop" class="toggle">≡</label>
-        <input type="checkbox" id="drop" /> 
+        <label for="drop" class="toggle"><span></span><span></span><span></span></label>
+        <input type="checkbox" id="drop">
+        
         <ul>
             
             <li><a href="/"  class="current" >ホーム</a>
@@ -45,7 +47,7 @@
                     <li><a href="/ja/book3steps/allsteps.html" >『心を磨く三拍子』</a> 
                     </li>
                     
-                    <li><a href="/ja/bookkuu/allkuu.html" >『空』</a> 
+                    <li><a href="/404.html" >『空』</a> 
                     </li>
                     
                 </ul>
@@ -70,19 +72,18 @@
                     <li><a href="/en/introduction_e.html" >Introduction</a> 
                     </li>
                     
-                    <li><a href="/ko/academy22/p-kr-01.html" >동사섭 아카데미</a> 
+                    <li><a href="/404.html" >동사섭 아카데미</a> 
                     </li>
                     
                 </ul>
                 
             </li>
             
-
         </ul>
         
     </div>
 </nav> 
-    <main class="home_index">
+    <main data-main="home_index">
     <img style="width:99%; max-width:495px;" src="/assets/images/arigato.png" alt="Arigato">
 </main>
 <!-- /#mainSection --> 
