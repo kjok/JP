@@ -88,6 +88,8 @@ navigation boxes
 ----------------------------------- */
 div#sitenav-content * { word-break: keep-all; }
 
+div#sitenav-content > ul > li > a { border-left: 1px outset white; width: 9.6rem; }
+
 div#sitenav-content > ul > li { min-width: 10rem; max-width: 100%; height: 30px; flex-grow: 0; flex-basis: calc(var(--multiplier) * 999); position: relative; }
 
 div#sitenav-content > ul > li:first-child a { visibility: hidden; }
@@ -108,8 +110,6 @@ div#sitenav-content > input[id^=drop]:checked + ul { display: none; transition: 
 /* navigation bar end */
 /* main content */
 main { padding: 0 1rem; flex-direction: column; background: transparent; flex: 2; margin-top: 0; padding: 1.5rem; font-family: 'Noto Serif KR', 'Noto Serif JP', serif; }
-
-main[data-main="home_index"] { text-align: center; }
 
 #footerframe { width: 100%; height: 100%; background-color: transparent; }
 
@@ -168,7 +168,7 @@ main[data-main="allsteps"] figure *, main[data-main="allkuu"] figure * { width: 
 
 main[data-main="allsteps"] figcaption, main[data-main="allkuu"] figcaption { margin: 1rem 0; padding: 12px; line-height: 1.4; border: 1px groove #fff; border-radius: 5px; }
 
-main[data-main="meg_base"] figure *, main[data-main="introduction_e"] figure *, main[data-main="dongsa_history"] figure * { width: 450px; align-self: center; }
+main[data-main="home_index"] figure *, main[data-main="meg_base"] figure *, main[data-main="introduction_e"] figure *, main[data-main="dongsa_history"] figure * { width: 450px; align-self: center; }
 
 main > footer { width: 90%; font-size: 1.6rem; line-height: 24px; padding: 20px 10px 10px; border: 4px groove; background-color: var(--much-more-lighten-color); }
 
@@ -194,6 +194,15 @@ img.illust { width: 100%; max-width: 400px; padding: 3rem 0; }
 #bosatsudo > div { display: table-cell; text-align: center; vertical-align: middle; }
 
 #bosatsudo > div > p { white-space: nowrap; }
+
+/* --------------------------------
+Site Map
+-------------------------------- */
+main[data-main="site_map"] li a::before { content: attr(alt); }
+
+main[data-main="site_map"] ul, main[data-main="site_map"] li { margin-left: 2em; }
+
+main[data-main="site_map"] a { text-decoration: underline; }
 
 /* --------------------------------
 academy
