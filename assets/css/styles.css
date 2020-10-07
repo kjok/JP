@@ -184,7 +184,7 @@ article.copyrightcope::before { color: var(--accent-hue-color); content: "[訳�
 
 article.copyrightcope * { color: var(--much-more-lighten-color); -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; cursor: default; }
 
-img.illust { width: 100%; max-width: 400px; padding: 3rem 0; }
+img.illust { height: 285px; padding: 3rem 0; }
 
 /* --------------------------------
 菩薩道チャート
@@ -209,6 +209,10 @@ academy
 -------------------------------- */
 main[data-main="academy22"] p { font-family: 'Noto Serif KR', 'Noto Serif JP', serif; line-height: 2.4; }
 
+main[data-main="academy22"] figure { width: 400px; height: 400px; margin: 2rem; -moz-box-shadow: 3px 3px 3px var(--base-color); -webkit-box-shadow: 3px 3px 3px var(--base-color); box-shadow: 3px 3px 3px var(--base-color); }
+
+main[data-main="academy22"] figure > img { width: 100%; height: 100%; object-fit: cover; }
+
 main[data-main="academy22"] #booktoc iframe { width: 22rem; height: 30rem; }
 
 main[data-main="academy22"] > header > div.logo { padding-left: 17rem; background-image: url("/ko/academy22/Images/dongsasub.png"); background-position: left; /* Center the image */ background-repeat: no-repeat; /* Do not repeat the image */ background-size: contain; /* 画像のサイズを指定    */ height: fit-content; }
@@ -216,6 +220,15 @@ main[data-main="academy22"] > header > div.logo { padding-left: 17rem; backgroun
 main[data-main="academy22"] > header > .author { width: 100%; margin: 40px auto; font-size: large; text-align: center; }
 
 main[data-main="academy22"] > section > h2 > span { display: inline-block; margin-right: 1em; }
+
+/* -------- ruby settings ------ */
+main[data-main="academy22"] { position: relative; }
+
+main[data-main="academy22"] s { text-decoration: none; white-space: nowrap; }
+
+div#myP { width: 100%; position: absolute; left: 0; top: 0; }
+
+div.myR { position: absolute; color: red; font-size: 10px; text-align: center; }
 
 .utube_iframe_wrap_outer { max-width: 500px; padding: 40px 0; }
 
