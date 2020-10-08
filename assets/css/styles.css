@@ -222,13 +222,9 @@ main[data-main="academy22"] > header > .author { width: 100%; margin: 40px auto;
 main[data-main="academy22"] > section > h2 > span { display: inline-block; margin-right: 1em; }
 
 /* -------- ruby settings ------ */
-main[data-main="academy22"] { position: relative; }
+main[data-main="academy22"] s { text-decoration: none; display: inline; position: relative; }
 
-main[data-main="academy22"] s { text-decoration: none; white-space: nowrap; }
-
-div#myP { width: 100%; position: absolute; left: 0; top: 0; }
-
-div.myR { position: absolute; color: red; font-size: 10px; text-align: center; }
+main[data-main="academy22"] s:after { color: #e95464; content: attr(title); position: absolute; top: -1.6rem; left: 0; width: 100%; display: -webkit-flex; display: flex; -webkit-justify-content: center; justify-content: center; font-size: .7em; }
 
 .utube_iframe_wrap_outer { max-width: 500px; padding: 40px 0; }
 
