@@ -210,7 +210,7 @@ academy
 -------------------------------- */
 main[data-main="academy22"] p { font-family: 'Noto Serif KR', 'Noto Serif JP', serif; line-height: 2.4; }
 
-main[data-main="academy22"] figure { width: 400px; height: 400px; margin: 2rem; -moz-box-shadow: 3px 3px 3px var(--base-color); -webkit-box-shadow: 3px 3px 3px var(--base-color); box-shadow: 3px 3px 3px var(--base-color); }
+main[data-main="academy22"] figure { width: 400px; height: 400px; margin: 2rem; -moz-box-shadow: 3px 3px 3px var(--lighten-color); -webkit-box-shadow: 3px 3px 3px var(--lighten-color); box-shadow: 3px 3px 3px var(--lighten-color); }
 
 main[data-main="academy22"] figure > img { width: 100%; height: 100%; object-fit: cover; }
 
