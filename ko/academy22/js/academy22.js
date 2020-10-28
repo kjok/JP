@@ -760,6 +760,7 @@ const dict = {
     '算': '산',
     '産': '산',
     '散': '산',
+    '酸': '산',
     '山': '산',
     '薩': '살',
     '殺': '살',
@@ -1211,7 +1212,6 @@ const dict = {
     '異': '이',
     '已': '이',
     '夷': '이',
-    '理': '이',
     '以': '이',
     '二': '이',
     '翼': '익',
@@ -1546,6 +1546,7 @@ const dict = {
     '秋': '추',
     '推': '추',
     '抽': '추',
+    '墜': '추',
     '逐': '축',
     '蓄': '축',
     '縮': '축',
@@ -1833,21 +1834,24 @@ const dict = {
     '希': '희',
     '喜': '희'
 }
+/* ********************
+ruby word-top exceptions
 
+    '理論': '이론',
+    '理想': '이상',
+    etc
+
+******************** */
 
 window.addEventListener("load", function () {
     putRuby();
 });
 
-/* window.addEventListener("resize", function () {
-    var remvethisElement = document.getElementById("myP");
-    remvethisElement.parentNode.removeChild(remvethisElement);
-    putRuby();
-}); */
+
 
 
 var putRuby = function () {
-    var findStr = "(?<!ruby>)(?<!<s>)[一-龥朗-鶴](?!<rt)(?!</s>)";
+    var findStr = "(?<!ruby>)(?<!<s title=\".\">)[一-龥朗-鶴](?!<rt)(?!</s>)";
     var replaceStr = '<s>$&</s>';
     var reg = new RegExp(findStr, 'g');
     var text = document.getElementsByTagName("main")[0].innerHTML;
@@ -1857,7 +1861,7 @@ var putRuby = function () {
     var i;
     for (i = 0; i < elementsHanja.length; i++) {
         var textHanja = elementsHanja[i].innerHTML;
-        if (dict[textHanja]) {
+        if (dict[textHanja] && !elementsHanja[i].hasAttribute("title")) {
             elementsHanja[i].setAttribute("title", dict[textHanja]);
         }
     }
