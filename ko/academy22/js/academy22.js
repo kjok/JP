@@ -180,6 +180,7 @@ const dict = {
     '怪': '괴',
     '壞': '괴',
     '塊': '괴',
+    '宏': '굉',
     '郊': '교',
     '較': '교',
     '矯': '교',
@@ -285,6 +286,7 @@ const dict = {
     '那': '나',
     '諾': '낙',
     '難': '난',
+    '卵': '난',
     '暖': '난',
     '男': '남',
     '南': '남',
@@ -458,7 +460,6 @@ const dict = {
     '料': '료',
     '僚': '료',
     '了': '료',
-    '龍': '룡',
     '累': '루',
     '漏': '루',
     '淚': '루',
@@ -1839,8 +1840,10 @@ ruby word-top exceptions
 
     '理論': '이론',
     '理想': '이상',
+    '兩重': '양중',
     etc
-
+hanja
+    \u3400-\u9FFF\uF900-\uFA6D 㐀-龯豈-舘
 ******************** */
 
 window.addEventListener("load", function () {
@@ -1848,11 +1851,9 @@ window.addEventListener("load", function () {
 });
 
 
-
-
 var putRuby = function () {
-    var findStr = "(?<!ruby>)(?<!<s title=\".\">)[一-龥朗-鶴](?!<rt)(?!</s>)";
-    var replaceStr = '<s>$&</s>';
+   var findStr = "(?<!ruby>)(?<!<s title=\".\">)[\u3400-\u9FFF\uF900-\uFAFF](?!<rt)(?!</s>)";
+   var replaceStr = '<s>$&</s>';
     var reg = new RegExp(findStr, 'g');
     var text = document.getElementsByTagName("main")[0].innerHTML;
     document.getElementsByTagName("main")[0].innerHTML = text.replace(reg, replaceStr);
