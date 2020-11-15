@@ -41,7 +41,7 @@ const dict = {
     '講': '강',
     '綱': '강',
     '江': '강',
-    '強': '강',
+    '强': '강',
     '康': '강',
     '剛': '강',
     '開': '개',
@@ -180,6 +180,7 @@ const dict = {
     '怪': '괴',
     '壞': '괴',
     '塊': '괴',
+    '宏': '굉',
     '郊': '교',
     '較': '교',
     '矯': '교',
@@ -285,6 +286,7 @@ const dict = {
     '那': '나',
     '諾': '낙',
     '難': '난',
+    '卵': '난',
     '暖': '난',
     '男': '남',
     '南': '남',
@@ -301,6 +303,7 @@ const dict = {
     '怒': '노',
     '奴': '노',
     '努': '노',
+    '老': '노',
     '農': '농',
     '腦': '뇌',
     '惱': '뇌',
@@ -457,7 +460,6 @@ const dict = {
     '料': '료',
     '僚': '료',
     '了': '료',
-    '龍': '룡',
     '累': '루',
     '漏': '루',
     '淚': '루',
@@ -759,6 +761,7 @@ const dict = {
     '算': '산',
     '産': '산',
     '散': '산',
+    '酸': '산',
     '山': '산',
     '薩': '살',
     '殺': '살',
@@ -1210,7 +1213,6 @@ const dict = {
     '異': '이',
     '已': '이',
     '夷': '이',
-    '理': '이',
     '以': '이',
     '二': '이',
     '翼': '익',
@@ -1545,6 +1547,7 @@ const dict = {
     '秋': '추',
     '推': '추',
     '抽': '추',
+    '墜': '추',
     '逐': '축',
     '蓄': '축',
     '縮': '축',
@@ -1575,6 +1578,7 @@ const dict = {
     '治': '치',
     '恥': '치',
     '値': '치',
+    '熾': '치',
     '則': '칙',
     '親': '친',
     '漆': '칠',
@@ -1831,22 +1835,25 @@ const dict = {
     '希': '희',
     '喜': '희'
 }
+/* ********************
+ruby word-top exceptions
 
+    '理論': '이론',
+    '理想': '이상',
+    '兩重': '양중',
+    etc
+hanja
+    \u3400-\u9FFF\uF900-\uFA6D 㐀-龯豈-舘
+******************** */
 
 window.addEventListener("load", function () {
     putRuby();
 });
 
-/* window.addEventListener("resize", function () {
-    var remvethisElement = document.getElementById("myP");
-    remvethisElement.parentNode.removeChild(remvethisElement);
-    putRuby();
-}); */
-
 
 var putRuby = function () {
-    var findStr = "(?<!ruby>)(?<!<s>)[一-龥朗-鶴](?!<rt)(?!</s>)";
-    var replaceStr = '<s>$&</s>';
+   var findStr = "(?<!ruby>)(?<!<s title=\".\">)[\u3400-\u9FFF\uF900-\uFAFF](?!<rt)(?!</s>)";
+   var replaceStr = '<s>$&</s>';
     var reg = new RegExp(findStr, 'g');
     var text = document.getElementsByTagName("main")[0].innerHTML;
     document.getElementsByTagName("main")[0].innerHTML = text.replace(reg, replaceStr);
@@ -1855,7 +1862,7 @@ var putRuby = function () {
     var i;
     for (i = 0; i < elementsHanja.length; i++) {
         var textHanja = elementsHanja[i].innerHTML;
-        if (dict[textHanja]) {
+        if (dict[textHanja] && !elementsHanja[i].hasAttribute("title")) {
             elementsHanja[i].setAttribute("title", dict[textHanja]);
         }
     }
