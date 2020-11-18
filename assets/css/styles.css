@@ -107,7 +107,7 @@ common settings
     --accent-hue-color: hsl(var(--accent-hue), 100%, 50%);
     
     --more-lighten-color-alphaL: hsla(40, 60%, 90%, 80%);
-    --more-lighten-color-alphaM: rgba(40, 60%, 90%, 40%);
+    --more-lighten-color-alphaM: hsla(40, 60%, 90%, 40%);
     --more-lighten-color-alphaH: hsla(40, 60%, 90%, 20%);
 }
 
