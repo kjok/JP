@@ -1836,6 +1836,7 @@ const dict = {
     '希': '희',
     '喜': '희'
 }
+
 /* ********************
 ruby word-top exceptions
 
@@ -1853,13 +1854,13 @@ window.addEventListener("load", function () {
 
 
 var putRuby = function () {
-   var findStr = "(?<!ruby>)(?<!<s title=\".\">)[\u3400-\u9FFF\uF900-\uFAFF](?!<rt)(?!</s>)";
-   var replaceStr = '<s>$&</s>';
+   var findStr = "(?<!ruby>)(?<!<b title=\".\">)[\u3400-\u9FFF\uF900-\uFAFF](?!<rt)(?!</b>)";
+   var replaceStr = '<b>$&</b>';
     var reg = new RegExp(findStr, 'g');
     var text = document.getElementsByTagName("main")[0].innerHTML;
     document.getElementsByTagName("main")[0].innerHTML = text.replace(reg, replaceStr);
 
-    var elementsHanja = document.getElementsByTagName("s");
+    var elementsHanja = document.getElementsByTagName("b");
     var i;
     for (i = 0; i < elementsHanja.length; i++) {
         var textHanja = elementsHanja[i].innerHTML;

@@ -703,13 +703,13 @@ main[data-main="academy22"]>section>h2>span {
 
 /* -------- ruby settings ------ */
 
-main[data-main="academy22"] s {
-    text-decoration: none;
+main[data-main="academy22"] b {
+    font-weight: normal;
     display: inline;
     position: relative;
 }
 
-main[data-main="academy22"] s:after {
+main[data-main="academy22"] b:after {
     color: #e95464;
     content: attr(title);
     position: absolute;
@@ -723,7 +723,7 @@ main[data-main="academy22"] s:after {
     font-size: 1rem;
 }
 
-main[data-main="academy22"] p s:after {
+main[data-main="academy22"] p b:after {
     top: -1.4rem;
 }
 
